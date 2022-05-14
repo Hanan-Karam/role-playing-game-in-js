@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Acme';
+    background-color: #041C32;
+}
+
+.container{
+    max-width: 900px;
+    display:flex;
+    margin: 30px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wizard, .orc{
+    max-width: 400px;
+    text-align: center;
+    color:white;
+    /* padding: 20px; */
+    border-radius: 5px;
+    border: solid 3px #fff;
+}
+.wizard{
+    background-color: #3E8E7E;
+}
+
+.orc{
+    background-color: #A13333;
+}
+h1, h2{
+    padding: 10px;
+}
+
+
+img{
+    display: inline-block;
+    padding: 20px;
+    border-radius: 15px;
+    width:320px;
+    height:320px;
+}
+
+.dice-container {
+    margin-top: 25px;
+    background-color: #064663;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wizard--dice , .orc--dice, .placeholder-dice{
+    background-color: #fff;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 5px;
+    color:#064663;
+    font-size: 50px;
+}
+
+.placeholder-dice{
+    border:solid 2px #fff;
+    background-color: #041C32;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attack , .reset{
+    background-color: #ECB365;
+    color:#041C32;
+    font-family: 'Acme';
+    font-size: 30px;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.reset{
+    display: none;
+}
+.title{
+    color:#ECB365;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.end-game{
+    margin-top: 15%;
+    text-align: center;
+    color:#A13333;
+}
+.end-game h2{
+    font-size: 70px;
+}
+ .end-game h3{
+    color:#3E8E7E;
+    font-size: 50px;
+ }
+
+
+.end-emoji{
+    font-size: 100px;
+}
+
+@media(max-width:550px){
+   .container{
+        flex-direction: column;
+        justify-content: center;
+        width:100vw;
+        gap: 2rem;
+        margin:5px auto;
+        padding:20px 0;
+   }
+   img{
+       width:280px;
+       height: 280px;
+       padding:5px;
+   }
+   h1 , h2, h3, p, .title, .end-emoji , .end-game h2, .end-game h3{
+       font-size: 30px;
+   }
+   .wizard, .orc{
+       max-width: 300px;
+       padding:  0;
+
+   }
+   .btns{
+       margin-bottom: 20px;
+   }
+}
+
+.health b {
+    font-weight: bold;
+    color:#fff;
+}
+
+.health-bar-outer {
+    background: #171217;
+    height: 1vh;
+    width:90%;
+    margin: 0 5%;
+    border-radius: 2px;
+}
+
+.health-bar-outer .health-bar-inner {
+    background: #79DAE8;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.health-bar-outer .health-bar-inner.danger {
+    background:#FF8D29
+}
